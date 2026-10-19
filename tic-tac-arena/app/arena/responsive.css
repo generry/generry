@@ -1,0 +1,23 @@
+@media (max-width: 460px) {
+  .levels { grid-template-columns: 1fr; }
+  .level { flex-direction: row; text-align: left; gap: 12px; padding: 10px 14px; flex-wrap: wrap; }
+  .level .lv-ico { width: 36px; height: 36px; }
+  .lv-name { flex: 0 0 auto; }
+  .lv-desc { flex: 1 1 100%; margin-left: 48px; margin-top: -22px; }
+  .level { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "i n" "i d"; align-items: center; }
+  .level .lv-ico { grid-area: i; }
+  .level .lv-name { grid-area: n; }
+  .level .lv-desc { grid-area: d; margin: 0; }
+  .board { gap: 8px; padding: 10px; border-radius: 26px; }
+  .cell { border-radius: 16px; }
+}
+@media (max-width: 400px) {
+  .tile { padding: 8px 10px; column-gap: 8px; }
+  .tile .t-glyph { width: 28px; height: 28px; }
+  .pips i { width: 10px; height: 10px; }
+  .t-score { column-gap: 6px; }
+  .tile[data-k="D"] { min-width: 68px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
