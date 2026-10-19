@@ -31,3 +31,11 @@ game/
   game.js              Board, turns, rounds, match, Time Rewind
   main.js              Menu choices and button wiring
 ```
+
+## MongoDB
+
+1. Copy `.env.example` to `.env.local` and set `MONGODB_URI` (and optionally `MONGODB_DB`).
+2. Run `npm run dev` and open http://localhost:3000/api/health. It returns `{"ok":true,...}` when the connection works.
+3. In server code, use `getDb()` from `lib/mongodb.js`.
+
+On Vercel, add the same variables under Project Settings > Environment Variables.
